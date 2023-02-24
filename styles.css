@@ -5,7 +5,7 @@
     font-family: 'Trebuchet MS', sans-serif;
 }
 .navbar {
-    background: #131313;
+    background: #f6f0f1;    /* navigation bar background color */
     height: 80px;
     display: flex;
     justify-content: center;
@@ -28,8 +28,10 @@
 }
 
 #navbar__logo {
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    /*
+    background-color: #c39e9e;
+    background-image: linear-gradient(to top, #c3c39e 0%, #ffb199 100%);
+    */
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -60,7 +62,7 @@
 }
 
 .navbar__links {
-    color: #fff;
+    color: #2d2d2b;     /* home, tech, products font color */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,7 +90,7 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #f77062;
-    color: #fff;
+    background: #c39e9e;    /* sign up button color */
+    color: #2d2d2b;         /* sign up font color */
 
 }
