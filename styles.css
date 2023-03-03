@@ -2,10 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 .navbar {
-    background: #89b0ef;
+    background: #131313;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -28,8 +28,8 @@
 }
 
 #navbar__logo {
-    background-color: #8309d4;
-    background-image: #faf7f7;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -60,7 +60,7 @@
 }
 
 .navbar__links {
-    color: #fff;
+    color: #2d2d2b;     /* home, tech, products font color */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,7 +88,7 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #31236a;
+    background: #f77062;
     color: #fff;
 
 }
