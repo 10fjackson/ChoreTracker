@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Store User Name</title>
+</head>
+<body>
+  <label for="nameInput">Please enter your name:</label>
+  <input type="text" id="nameInput">
+  <button onclick="storeName()">Store Name</button>
+
+  <script>
+    function storeName() {
+      var name = document.getElementById("nameInput").value;
+      sessionStorage.setItem("name", name);
+      alert("Name stored successfully!");
+    }
+  </script>
+</body>
+</html>
