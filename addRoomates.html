@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Roommate List</title>
+    <link rel="stylesheet" href="AddRoomatesStyles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">Chore Tracker</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/addChores.html" class="navbar__links">Create</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/aboutUs.html" class="navbar__links"> About Us </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+	<h1>Roommate List</h1>
+	<p>Please fill out the form below to add a new roommate:</p>
+
+	<form>
+		<label for="roommate">Roommate:</label>
+		<input type="text" id="roommate" name="roommate" placeholder="Enter your roommate's name...">
+		<br><br>
+		<input type="button" value="Add Roommate" onclick="addRoommate()">
+		<input type="button" value="Clear List" onclick="clearList()">
+        <input type="submit" value="Create calendar" onclick="submitForm()">
+	</form>
+
+	<h2>Roommate List</h2>
+	<ul id="roommateList">
+	</ul>
+
+	<script>
+		var roommateList = [];
+
+		function addRoommate() {
+			var roommateInput = document.getElementById("roommate");
+			var roommate = roommateInput.value;
+			roommateList.push(roommate);
+			roommateInput.value = "";
+			updateRoommateList();
+		}
+
+		function clearList() {
+			roommateList = [];
+			updateRoommateList();
+		}
+
+		function updateRoommateList() {
+			var roommateListElement = document.getElementById("roommateList");
+			roommateListElement.innerHTML = "";
+			for (var i = 0; i < roommateList.length; i++) {
+				var roommateItem = document.createElement("li");
+				roommateItem.textContent = roommateList[i];
+				roommateListElement.appendChild(roommateItem);
+			}
+		}
+        function submitForm() {
+			var form = document.getElementsByTagName("form")[0];
+			form.action = "create.html";
+		}
+	</script>
+</body>
+</html>
