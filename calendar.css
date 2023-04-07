@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: 85vh;
+}
+
+.calendar-row {
+  display: flex;
+  flex: 1;
+}
+
+.calendar-cell {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border: 1px solid #2f8fb4;
+  position: relative;
+  background-color: #77d8ff;
+  padding: 4px;
+  transition: all 0.3s;
+}
+
+.calendar-cell:before {
+  content: "";
+  display: block;
+  padding-top: 80%; /* Sets the aspect ratio to 1:1.25 */
+}
+
+.calendar-cell > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.calendar-cell:hover {
+  background-color: #2f8fb4;
+  color: white;
+}
+.calendar-header .calendar-cell {
+  background-color: #2f8fb4;
+  color: white;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.day-number {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+
+
+

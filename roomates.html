@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Roommate List</title>
-    <link rel="stylesheet" href="AddRoomatesStyles.css">
+    <link rel="stylesheet" href="roomates.css">
 </head>
 <body>
     <nav class="navbar">
@@ -15,10 +15,10 @@
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__item">
-                    <a href="/addChores.html" class="navbar__links">Create</a>
+                    <a href="/chores.html" class="navbar__links">Create</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/aboutUs.html" class="navbar__links"> About Us </a>
+                    <a href="/about.html" class="navbar__links"> About Us </a>
                 </li>
             </ul>
         </div>
@@ -42,36 +42,7 @@
 	<h2>Roommate List</h2>
 	<ul id="roommateList">
 	</ul>
-
-	<script>
-		var roommateList = [];
-
-		function addRoommate() {
-			var roommateInput = document.getElementById("roommate");
-			var roommate = roommateInput.value;
-			roommateList.push(roommate);
-			roommateInput.value = "";
-			updateRoommateList();
-		}
-
-		function clearList() {
-			roommateList = [];
-			updateRoommateList();
-		}
-
-		function updateRoommateList() {
-			var roommateListElement = document.getElementById("roommateList");
-			roommateListElement.innerHTML = "";
-			for (var i = 0; i < roommateList.length; i++) {
-				var roommateItem = document.createElement("li");
-				roommateItem.textContent = roommateList[i];
-				roommateListElement.appendChild(roommateItem);
-			}
-		}
-        function submitForm() {
-			var form = document.getElementsByTagName("form")[0];
-			form.action = "create.html";
-		}
-	</script>
+	<script src="roommates.js"></script>
+	
 </body>
 </html>
