@@ -49,5 +49,5 @@ var choreList = [];
 
 		function submitForm() {
 			var form = document.getElementsByTagName("form")[0];
-			form.action = "roomates.html";
+			form.action = "roomatesParallax.html";
 		}
